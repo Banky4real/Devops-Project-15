@@ -192,7 +192,7 @@
 ### Specifying path to our generated key and cert in ssl.conf config file
 ![Specifying-path-to-our-key-and-cert-in-ssl-config-file](./Images/Specifying-path-to-our-key-and-cert-in-ssl-config-file.png)
 
-### Specifying path to our generated key and cert in ssl.conf config file, cganging it from default to our generated key and cert name
+### Specifying path to our generated key and cert in ssl.conf config file, changing it from default to our generated key and cert name
 ![Specifying-path-to-our-key-and-cert-in-ssl-config-file](./Images/Specifying-path-to-our-key-and-cert-in-ssl-config-file.png)
 
 ### Creating an AMI for each of our instances
