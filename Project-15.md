@@ -205,3 +205,64 @@
 
 ### Creating a target group for our required resources, nginx, tooling and wordpress servers
 ![target-group-created-for-nginx](./Images/target-group-created-for-our-resources.png)
+
+## Creating our Load Balancers
+
+### Creating Internet facing (external) Load balancer for our Nginx target Group
+![Internet-Facing-ALB](./Images/Internet-Facing-ALB.png)
+
+### Creating an Internal Load Balancer for the 2 webservers behind our Internal Load Balancer Security Group, tooling and Wordpress. Traffic will be forwarded by default to our Wordpress target but a rule will be configured to forward tooling request to tooling target group
+![Internal-Load-Balancer-created](./Images/Internal-Load-Balancer-created.png)
+
+### Creating a rule to grab requests for tooling by checking host header for requests from toolingibk.site and forwarding it to tooling target group
+![rule-created-for-tooling-target-group](./Images/rule-created-for-tooling-target-group.png)
+
+### Creating a Launch Template for Bastion Server which involves specifying our AMI and User data
+![Launch-template-created-for-bastion](./Images/Launch-template-created-for-bastion.png)
+
+### Creating a Launch Template for Nginx Server which involves specifying our AMI and User data
+![Launch-template-created-for-Nginx](./Images/Launch-template-created-for-Nginx.png)
+
+### Creating a Launch Template for Wordpress Server which involves specifying our AMI and User data
+![Launch-template-created-for-wordpress](./Images/Launch-template-created-for-wordpress.png)
+
+### Creating a Launch Template for tooling Server which involves specifying our AMI and User data
+![Launch-template-created-for-tooling](./Images/Launch-template-created-for-tooling.png)
+
+![all-launch-templates-successfully-create](./Images/all-launch-templates-successfully-created.png)
+
+## Creating our Auto scalaing group
+
+### Creating autoscaling group for Bastion
+![Autoscalaing-group-created-for-bastion](./Images/Autoscalaing-group-created-for-bastion.png)
+
+### Creating autoscaling group for Nginx
+![Autoscalaing-group-created-for-Nginx](./Images/Autoscalaing-group-created-for-Nginx.png)
+
+### Accessing our Bastion to create Database for wordpress and tooling app
+![wordpress-and-toolingdb-created-on-bastion](./Images/wordpress-and-toolingdb-created-on-bastion.png)
+
+### Creating autoscaling group for Tooling and Wordpress
+![Autoscaling-group-created-for-tooling-and-wordpress](./Images/Autoscalaing-group-created-for-tooling-and-wordpress.png)
+
+### Creating a record in our Route53 for our external Load Balancer to forward traffic to the appropriate webserver
+![route53-record-created-for-ext-load-balancer](./Images/route53-record-created-for-ext-load-balancer.png)
+
+### Checking the status of our target groups to ensure they are in a healthy state
+
+### Nginx target health status
+![Nginx-target-in-a-healthy-state](./Images/Nginx-target-in-a-healthy-state.png)
+
+### Tooling target health status
+![Tooling-target-in-a-healthy-state](./Images/Tooling-target-in-a-healthy-state.png)
+
+### Wordpress target health status
+![Wordpress-target-in-a-healthy-state](./Images/Wordpress-target-in-a-healthy-state.png)
+
+### Tooling website Live
+![tooling-website-live](./Images/tooling-website-live.png)
+
+### Wordpress website Live
+![wordpress-website-live](./Images/wordpress-website-live.png)
+
+![wordpress-website-live-2](./Images/wordpress-website-live-2.png)
